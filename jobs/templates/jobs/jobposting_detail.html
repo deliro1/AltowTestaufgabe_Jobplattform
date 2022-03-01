@@ -1,0 +1,15 @@
+{% extends "jobs/base.html" %}
+{% block content %}
+
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ jobposting.company }}</a>
+    </div>
+    <h2><a class="article-title" href="#">{{ jobposting.title }}</a></h2>
+    <p class="article-content">{{ jobposting.description }}</p>
+  </div>
+</article>
+
+
+{% endblock content %}
