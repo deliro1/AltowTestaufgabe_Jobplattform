@@ -12,6 +12,7 @@ class Company(models.Model):
         return reverse('company-detail', kwargs={'pk': self.pk})
 
 
+
 class JobPosting(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
