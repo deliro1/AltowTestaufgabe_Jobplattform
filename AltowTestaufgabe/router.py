@@ -1,4 +1,4 @@
-from api.viewsets import CompanyViewSet, JobPostingViewSet, ApplicantViewSet
+from jobs.api.viewsets import CompanyViewSet, JobPostingViewSet, ApplicantViewSet
 from rest_framework import routers
 
 router = routers.DefaultRouter()
