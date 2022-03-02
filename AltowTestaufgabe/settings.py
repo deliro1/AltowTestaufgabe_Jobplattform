@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',
     'jobs.apps.JobsConfig',
     'crispy_forms',
     'django.contrib.admin',
