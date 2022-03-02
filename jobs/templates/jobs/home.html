@@ -5,11 +5,14 @@
 <article class="media content-section">
   <div class="media-body">
     <div class="article-metadata">
-      <a class="mr-2" href="#">{{ company.name }}</a>
+      <a class="mr-2">Company name:</a>
     </div>
-    <h2><a class="article-title" href="#">{{ company.name }}</a></h2>
+    <h2><a class="article-title" href="{% url 'company-detail' company.id%}">{{ company.name }}</a></h2>
   </div>
 </article>
 {%endfor%}
 
 {% endblock content %}
+
+
+

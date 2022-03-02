@@ -4,10 +4,12 @@
 <article class="media content-section">
   <div class="media-body">
     <div class="article-metadata">
-      <a class="mr-2" href="#">{{ applicant.jobPosting.company }}</a>
+      <a class="mr-2" href="{% url 'company-detail' applicant.jobPosting.company.id%}">{{ applicant.jobPosting.company }}</a>
     </div>
-    <h2><a class="article-title" href="#">{{ apllicant.name }}</a></h2>
+    <h2><a class="article-title">{{ applicant.name }}</a></h2>
     <p class="article-content">{{ applicant.email }}</p>
+    <p class="article-content">{{ applicant.jobPosting.title }}</p>
+    <a class="article-content" href="{% url 'applicant-delete' applicant.id%}">Delete applicant</a>
   </div>
 </article>
 

@@ -8,6 +8,7 @@
     </div>
     <h2><a class="article-title" href="#">{{ jobposting.title }}</a></h2>
     <p class="article-content">{{ jobposting.description }}</p>
+    <a class="article-content" href="{% url 'jobposting-delete' jobposting.id%}">Delete job posting</a>
   </div>
 </article>
 

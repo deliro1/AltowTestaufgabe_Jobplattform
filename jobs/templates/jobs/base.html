@@ -29,13 +29,9 @@
                 <div class="navbar-nav mr-auto">
                   <a class="nav-item nav-link" href="{% url 'jobs-home' %}">Companies</a>
                     <a class="nav-item nav-link" href="{% url 'jobposting-list' %}">Job Postings</a>
-                    <a class="nav-item nav-link" href="{% url 'jobs-home' %}">Applicants</a>
+                    <a class="nav-item nav-link" href="{% url 'applicant-list' %}">Applicants</a>
                 </div>
                 <!-- Navbar Right Side -->
-                <div class="navbar-nav">
-                  <a class="nav-item nav-link" href="#">Login</a>
-                  <a class="nav-item nav-link" href="#">Register</a>
-                </div>
               </div>
             </div>
           </nav>
@@ -55,13 +51,12 @@
             </div>
             <div class="col-md-4">
               <div class="content-section">
-                <h3>Our Sidebar</h3>
+                <h3>Create new content</h3>
                 <p class='text-muted'>
                   <ul class="list-group">
-                    <li class="list-group-item list-group-item-light">Latest Posts</li>
-                    <li class="list-group-item list-group-item-light">Announcements</li>
-                    <li class="list-group-item list-group-item-light">Calendars</li>
-                    <li class="list-group-item list-group-item-light">etc</li>
+                    <a href="{% url 'company-create'%}" class="list-group-item list-group-item-light">Create new company</a>
+                    <a href="{% url 'jobposting-create'%}"  class="list-group-item list-group-item-light">Create new job posting</a>
+                    <a href="{% url 'applicant-create'%}"  class="list-group-item list-group-item-light">Create new applicant</a>
                   </ul>
                 </p>
               </div>

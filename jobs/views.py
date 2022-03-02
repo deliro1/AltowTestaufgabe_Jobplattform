@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView
 from .models import Company, Applicant, JobPosting
 
 
@@ -18,6 +18,12 @@ class CompanyCreateView(CreateView):
     fields = ['name']
 
 
+class CompanyDeleteView(DeleteView):
+    model = Company
+    template_name = 'jobs/company_confirm_delete.html'
+    success_url = '/'
+
+
 class JobpostingListView(ListView):
     model = JobPosting
     template_name = 'jobs/jobposting_list.html'
@@ -31,6 +37,12 @@ class JobpostingDetailView(DetailView):
 class JobpostingCreateView(CreateView):
     model = JobPosting
     fields = ['title', 'description', 'company']
+
+
+class JobpostingDeleteView(DeleteView):
+    model = JobPosting
+    template_name = 'jobs/jobposting_confirm_delete.html'
+    success_url = '/'
 
 
 class ApplicantListView(ListView):
@@ -47,3 +59,7 @@ class ApplicantCreateView(CreateView):
     model = Applicant
     fields = ['name', 'email', 'jobPosting']
 
+
+class ApplicantDeleteView(DeleteView):
+    model = Applicant
+    success_url = '/'

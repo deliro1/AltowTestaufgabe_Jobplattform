@@ -5,9 +5,9 @@
 <article class="media content-section">
   <div class="media-body">
     <div class="article-metadata">
-      <a class="mr-2" href="#">{{ listing.company }}</a>
+      <a class="mr-2" href="{% url 'company-detail' listing.id%}">{{ listing.company }}</a>
     </div>
-    <h2><a class="article-title" href="#">{{ listing.title }}</a></h2>
+    <h2><a class="article-title" href="{% url 'jobposting-detail' listing.id%}">{{ listing.title }}</a></h2>
     <p class="article-content">{{ listing.description }}</p>
   </div>
 </article>
